@@ -1,6 +1,12 @@
 package br.com.zapia.wpp.api.model.payloads;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 
+@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY)
+@JsonSubTypes({
+        @JsonSubTypes.Type(value = WebSocketResponseFrame.class, name = "WebSocketResponseFrame")}
+)
 public class WebSocketResponse {
 
     private int status;

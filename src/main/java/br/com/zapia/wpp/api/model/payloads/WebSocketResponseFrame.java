@@ -6,6 +6,9 @@ public class WebSocketResponseFrame extends WebSocketResponse {
     private int frameId;
     private int qtdFrames;
 
+    public WebSocketResponseFrame() {
+    }
+
     public WebSocketResponseFrame(int status) {
         super(status);
     }

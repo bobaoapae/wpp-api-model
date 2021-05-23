@@ -1,15 +1,17 @@
 package br.com.zapia.wpp.api.model.payloads;
 
+import br.com.zapia.wpp.api.model.handlersWebSocket.EventWebSocket;
+
 public class WebSocketRequestPayLoad {
 
-    private String event;
+    private EventWebSocket event;
     private Object payload;
 
-    public String getEvent() {
+    public EventWebSocket getEvent() {
         return event;
     }
 
-    public void setEvent(String event) {
+    public void setEvent(EventWebSocket event) {
         this.event = event;
     }
 

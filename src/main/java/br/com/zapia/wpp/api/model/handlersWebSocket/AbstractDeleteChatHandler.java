@@ -1,7 +1,7 @@
 package br.com.zapia.wpp.api.model.handlersWebSocket;
 
-@HandlerWebSocketEvent(event = EventWebSocket.SeeChat)
-public abstract class AbstractSeeChatHandler implements IHandlerWebSocket<String> {
+@HandlerWebSocketEvent(event = EventWebSocket.DeleteChat)
+public abstract class AbstractDeleteChatHandler implements IHandlerWebSocket<String> {
 
     @Override
     public Class<String> getClassType() {

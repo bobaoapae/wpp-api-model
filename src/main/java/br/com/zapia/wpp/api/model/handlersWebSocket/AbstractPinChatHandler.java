@@ -1,6 +1,6 @@
 package br.com.zapia.wpp.api.model.handlersWebSocket;
 
-
+@HandlerWebSocketEvent(event = EventWebSocket.PinChat)
 public abstract class AbstractPinChatHandler implements IHandlerWebSocket<String> {
 
     @Override

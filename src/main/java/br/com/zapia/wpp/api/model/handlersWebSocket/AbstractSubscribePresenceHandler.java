@@ -1,6 +1,6 @@
 package br.com.zapia.wpp.api.model.handlersWebSocket;
 
-
+@HandlerWebSocketEvent(event = EventWebSocket.SubscribePresence)
 public abstract class AbstractSubscribePresenceHandler implements IHandlerWebSocket<String> {
 
     @Override

@@ -1,7 +1,9 @@
 package br.com.zapia.wpp.api.model.handlersWebSocket;
 
+import br.com.zapia.wpp.api.model.payloads.WebSocketRequest;
+
 @HandlerWebSocketEvent(event = EventWebSocket.MarkRead)
-public abstract class AbstractMarkReadHandler implements IHandlerWebSocket<String> {
+public abstract class AbstractMarkReadHandler<K extends WebSocketRequest> implements IHandlerWebSocket<K, String> {
 
     @Override
     public Class<String> getClassType() {

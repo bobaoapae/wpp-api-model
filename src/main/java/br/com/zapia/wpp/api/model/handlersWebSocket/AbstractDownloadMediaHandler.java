@@ -1,7 +1,9 @@
 package br.com.zapia.wpp.api.model.handlersWebSocket;
 
+import br.com.zapia.wpp.api.model.payloads.WebSocketRequest;
+
 @HandlerWebSocketEvent(event = EventWebSocket.DownloadMedia)
-public abstract class AbstractDownloadMediaHandler implements IHandlerWebSocket<String> {
+public abstract class AbstractDownloadMediaHandler<K extends WebSocketRequest> implements IHandlerWebSocket<K, String> {
 
     @Override
     public Class<String> getClassType() {

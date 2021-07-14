@@ -10,6 +10,8 @@ public enum EventWebSocket {
     DownloadMedia,
     FindChat,
     FindChatByNumber,
+    FindContact,
+    FindContactByNumber,
     FindMessage,
     FindPicture,
     ForwardMessage,

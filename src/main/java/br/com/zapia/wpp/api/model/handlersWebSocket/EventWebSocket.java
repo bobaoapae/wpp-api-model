@@ -20,6 +20,7 @@ public enum EventWebSocket {
     GetAllQuickReplies,
     GetDriverState,
     GetGroupInviteInfo,
+    GetGroupParticipants,
     GetQrCode,
     GetSelfInfo,
     JoinGroupByInviteLink,

@@ -169,13 +169,15 @@ public class SendMessageRequest {
 
         private String uuid;
         private boolean forceDocument;
+        private StickerData stickerData;
 
         public FileSend() {
         }
 
-        public FileSend(String uuid, boolean forceDocument) {
+        public FileSend(String uuid, boolean forceDocument, StickerData stickerData) {
             this.uuid = uuid;
             this.forceDocument = forceDocument;
+            this.stickerData = stickerData;
         }
 
         public String getUuid() {
@@ -185,6 +187,10 @@ public class SendMessageRequest {
         public boolean isForceDocument() {
             return forceDocument;
         }
+
+        public StickerData getStickerData() {
+            return stickerData;
+        }
     }
 
     public static class FileBuilder {
@@ -192,6 +198,7 @@ public class SendMessageRequest {
         private String caption;
         private String uuid;
         private boolean forceDocument;
+        private StickerData stickerData;
 
         public FileBuilder() {
         }
@@ -210,12 +217,39 @@ public class SendMessageRequest {
             return this;
         }
 
+        public FileBuilder withForceSticker(String stickerName) {
+            return withForceSticker(stickerName, "");
+        }
+
+        public FileBuilder withForceSticker(String stickerName, String stickerCollectionName) {
+            this.stickerData = new StickerData(stickerName, stickerCollectionName);
+            return this;
+        }
+
         public String getCaption() {
             return caption;
         }
 
         public FileSend build() {
-            return new FileSend(uuid, forceDocument);
+            return new FileSend(uuid, forceDocument, stickerData);
+        }
+    }
+
+    public static class StickerData {
+        private final String stickerName;
+        private final String stickerCollectionName;
+
+        public StickerData(String stickerName, String stickerCollectionName) {
+            this.stickerName = stickerName;
+            this.stickerCollectionName = stickerCollectionName;
+        }
+
+        public String getStickerName() {
+            return stickerName;
+        }
+
+        public String getStickerCollectionName() {
+            return stickerCollectionName;
         }
     }
 

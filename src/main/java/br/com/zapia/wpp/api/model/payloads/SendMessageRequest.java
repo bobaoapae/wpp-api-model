@@ -236,8 +236,8 @@ public class SendMessageRequest {
     }
 
     public static class StickerData {
-        private final String stickerName;
-        private final String stickerCollectionName;
+        private String stickerName;
+        private String stickerCollectionName;
 
         public StickerData() {
         }

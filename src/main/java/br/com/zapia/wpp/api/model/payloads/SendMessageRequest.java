@@ -239,6 +239,9 @@ public class SendMessageRequest {
         private final String stickerName;
         private final String stickerCollectionName;
 
+        public StickerData() {
+        }
+
         public StickerData(String stickerName, String stickerCollectionName) {
             this.stickerName = stickerName;
             this.stickerCollectionName = stickerCollectionName;
